@@ -1,0 +1,11 @@
+<p>Caculator</p>
+<input type="number" #number1>
+<select  #action>
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select>
+<input type="number" #number2>
+<button (click)="caculatorAction(number1.value, number2.value, action.value)">=</button>
+<p>kết quả bằng: {{result}}</p>

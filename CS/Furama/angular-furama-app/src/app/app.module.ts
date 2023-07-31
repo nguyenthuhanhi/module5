@@ -8,6 +8,8 @@ import { ContractComponent } from './contract/contract.component';
 import { CustomerComponent } from './customer/customer.component';
 import { EditComponent } from './service/edit.component';
 import { ServiceComponent } from './service/service.component';
+import { EditContractComponent } from './edit-contract/edit-contract.component';
+import { AddContractComponent } from './add-contract/add-contract.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { ServiceComponent } from './service/service.component';
     ContractComponent,
     CustomerComponent,
     EditComponent,
-    ServiceComponent
+    ServiceComponent,
+    EditContractComponent,
+    AddContractComponent
   ],
   imports: [
     BrowserModule,

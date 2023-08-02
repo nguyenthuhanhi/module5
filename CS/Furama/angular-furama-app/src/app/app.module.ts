@@ -10,6 +10,10 @@ import { EditComponent } from './service/edit.component';
 import { ServiceComponent } from './service/service.component';
 import { EditContractComponent } from './edit-contract/edit-contract.component';
 import { AddContractComponent } from './add-contract/add-contract.component';
+import { AddServiceComponent } from './add-service/add-service.component';
+import { EditServiceComponent } from './edit-service/edit-service.component';
+import { AddCustomerComponent } from './add-customer/add-customer.component';
+import { EditCustomerComponent } from './edit-customer/edit-customer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { AddContractComponent } from './add-contract/add-contract.component';
     EditComponent,
     ServiceComponent,
     EditContractComponent,
-    AddContractComponent
+    AddContractComponent,
+    AddServiceComponent,
+    EditServiceComponent,
+    AddCustomerComponent,
+    EditCustomerComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,33 @@
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <td>Id dịch vụ</td>
+    <td>Tên dịch vụ</td>
+    <td>Diện tích</td>
+    <td>Số tầng</td>
+    <td>Số người tối đa</td>
+    <td>Chi phí thuê</td>
+    <td>Trạng thái</td>
+    <td>Hành Động</td>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let facility of facilities">
+    <td>{{facility.idDichVu}}</td>
+    <td>{{facility.tenDichVu}}</td>
+    <td>{{facility.dienTich}}</td>
+    <td>{{facility.soTang}}</td>
+    <td>{{facility.soNguoiToiDa}}</td>
+    <td>{{facility.chiPhiThue}}</td>
+    <td>{{facility.trangThai}}</td>
+    <td>
+      <div class="btn-group">
+        <a class="btn btn-danger">Delete</a>
+        <a class="btn btn-warning">Edit</a>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

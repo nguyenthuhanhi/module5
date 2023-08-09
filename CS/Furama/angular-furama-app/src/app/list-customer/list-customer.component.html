@@ -1,0 +1,32 @@
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <td>Id khách hàng</td>
+    <td>Họ tên</td>
+    <td>Ngày sinh</td>
+    <td>Cmnd</td>
+    <td>Sdt</td>
+    <td>Email</td>
+    <td>Địa chỉ</td>
+    <td>Hành Động</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let customer of customers">
+    <td>{{customer.idKhanhHang}}</td>
+    <td>{{customer.hoTen}}</td>
+    <td>{{customer.ngaySinh}}</td>
+    <td>{{customer.soCMND}}</td>
+    <td>{{customer.sdt}}</td>
+    <td>{{customer.email}}</td>
+    <td>{{customer.diaChi}}</td>
+    <td>
+      <div class="btn-group">
+        <a class="btn btn-danger">Delete</a>
+        <a class="btn btn-warning">Edit</a>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

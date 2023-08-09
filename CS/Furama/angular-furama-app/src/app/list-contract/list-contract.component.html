@@ -1,0 +1,28 @@
+
+<table class="table table-hover">
+  <thead>
+  <tr>
+    <td>Id hợp đồng</td>
+    <td>Ngày làm hợp đồng</td>
+    <td>Ngày kết thúc hợp đồng</td>
+    <td>Tiền đặt cọc</td>
+    <td>Tổng tiền</td>
+    <td>Hành Động</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let contract of contracts">
+    <td>{{contract.idHopDong}}</td>
+    <td>{{contract.ngayLamHopDong}}</td>
+    <td>{{contract.ngayKetThuc}}</td>
+    <td>{{contract.tienDatCoc}}</td>
+    <td>{{contract.tongTien}}</td>
+    <td>
+      <div class="btn-group">
+        <a class="btn btn-danger">Delete</a>
+        <a class="btn btn-warning">Edit</a>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>

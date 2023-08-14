@@ -1,0 +1,17 @@
+<h3 style="text-align: center">Translate</h3>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <td>STT</td>
+    <td>English</td>
+    <td>Detail</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let iWord of iWords; index as i">
+    <td>{{i+1}}</td>
+    <td>{{iWord.word}}</td>
+    <td><input type="button" value="Detail" routerLink="/detail/{{iWord.word}}"></td>
+  </tr>
+  </tbody>
+</table>

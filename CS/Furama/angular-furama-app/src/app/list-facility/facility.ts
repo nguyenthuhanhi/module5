@@ -4,6 +4,6 @@ export interface Facility{
    dienTich?: number,
    soTang?: number,
    soNguoiToiDa?: number,
-  chiPhiThue?: number,
-  trangThai?: string
+   chiPhiThue?: number,
+   trangThai?: string
 }

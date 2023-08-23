@@ -12,43 +12,27 @@
     },
     {
       "id": 3,
-      "name": "AVCB",
-      "price": 123543,
-      "description": "nshicnc",
-      "category": {
-        "name": "IPhone5",
-        "id": 1
-      }
-    },
-    {
-      "id": 4,
-      "name": "sfdxvx",
-      "price": 325346,
-      "description": "sdgxcv",
+      "name": "12",
+      "price": 12,
+      "description": "12",
       "category": {
         "id": 2,
         "name": "Samsung"
       }
     },
     {
-      "id": 5,
-      "name": "fgdg",
-      "price": 34423,
-      "description": "dfvdfv",
-      "category": {
-        "name": "IPhone5",
-        "id": 1
-      }
+      "id": 4,
+      "name": null,
+      "price": null,
+      "description": null,
+      "category": null
     },
     {
-      "id": 6,
-      "name": "bczfdbsd",
-      "price": 3554756,
-      "description": "cvbfgn",
-      "category": {
-        "id": 3,
-        "name": "LG"
-      }
+      "id": 5,
+      "name": null,
+      "price": null,
+      "description": null,
+      "category": null
     }
   ],
   "categories": [

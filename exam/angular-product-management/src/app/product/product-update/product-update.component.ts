@@ -19,6 +19,9 @@ export class ProductUpdateComponent implements OnInit {
   product: Product;
 
   // tslint:disable-next-line:variable-name max-line-length
+  displayStyle = 'none';
+
+  // tslint:disable-next-line:variable-name
   constructor(private _formBuilder: FormBuilder, private _productService: ProductService,
               // tslint:disable-next-line:variable-name
               private _activatedRoute: ActivatedRoute, private _router: Router,
@@ -53,10 +56,12 @@ export class ProductUpdateComponent implements OnInit {
     }, error => console.log(error));
 
   }
+
   // @ts-ignore
   findAllCategory(): Category[] {
     this._categoryService.getAll().subscribe(value => {
       this.categories = value;
     });
   }
+
 }

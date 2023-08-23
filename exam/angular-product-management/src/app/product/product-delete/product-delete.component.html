@@ -1,0 +1,62 @@
+<h1>Xóa sản phẩm</h1>
+<form *ngIf="productForm" [formGroup]="productForm" (ngSubmit)="submit(id)">
+  <table>
+    <tr>
+      <td>Mã sản phẩm:</td>
+      <td><input type="number" formControlName="id" readonly></td>
+    </tr>
+    <tr>
+      <td>Tên sản phẩm:</td>
+      <td><input type="text" formControlName="name" readonly></td>
+    </tr>
+    <tr>
+      <td>Giá sản phẩm</td>
+      <td><input type="number" formControlName="price" readonly></td>
+    </tr>
+    <tr>
+      <td>Mô tả về sản phẩm</td>
+      <td><input type="text" formControlName="description" readonly></td>
+    </tr>
+    <tr>
+      <td>Category</td>
+      <td>
+        <select id="category" formControlName="category">
+          <option *ngFor="let category of categories" [ngValue]="category">{{ category.name }}</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+<!--      <td><input type="submit" value="Delete"></td>-->
+      <td>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="openPopup()">Delete
+        </button>
+      </td>
+    </tr>
+  </table>
+  <div
+    class="modal"
+    tabindex="-1"
+    role="dialog"
+    [ngStyle]="{'display':displayStyle}">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">GeeksForGeeks</h4>
+        </div>
+        <div class="modal-body">
+          <p>One Stop Solution for all CS problems</p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger"
+                  (click)="closePopup()">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+    </div>
+</form>

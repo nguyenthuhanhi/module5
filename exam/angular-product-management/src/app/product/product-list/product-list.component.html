@@ -1,0 +1,59 @@
+<h1>Danh sách sản phẩm</h1>
+<div style="float: left; display: inline-block">
+  <a routerLink="/product/create">Tạo mới sản phẩm</a>
+</div>
+<div style="float: right; display: inline-block; margin-right: 20px">
+  <input #inputSerach type="text" placeholder="Input name">
+  <button (click)="search(inputSerach)">Search</button>
+</div>
+<table class="table">
+  <thead>
+  <tr>
+    <td>ID</td>
+    <td>Tên</td>
+    <td>Giá</td>
+    <td>Mô tả</td>
+    <td>Thể Loại</td>
+    <td colspan="2">Chức Năng</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of products | paginate: { itemsPerPage:3 , currentPage:p}; index as i">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.description}}</td>
+    <td>{{product.category.name}}</td>
+    <td><a [routerLink]="['/product/edit',product.id]">Chỉnh sửa</a></td>
+    <td><a (click)="openPopup(product.id)">Xóa</a></td>
+  </tr>
+  </tbody>
+</table>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display':displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Delete</h4>
+      </div>
+      <div class="modal-body">
+        <p>Bạn có muốn xóa hay không ?</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger"
+                (click)="closePopup()">
+          Close
+        </button>
+        <button type="button" class="btn btn-danger"
+                (click)="delete()">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
